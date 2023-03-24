@@ -26,21 +26,22 @@ function alertFunc(message) {
 }
 
 //User Landing Page
-const form = document.querySelector("form");
+const forms = document.querySelector("form");
 const input = document.querySelector("#input");
 const userGreeting = document.querySelector("#user-greeting");
 const loadingGif = document.querySelector("img");
 
-form.addEventListener("submit", (e) => {
+forms.addEventListener("submit", (e) => {
   e.preventDefault();
   const inputValue = input.value;
-  const password = "Roseller";
+  // const password = "Roseller";
 
-  if (inputValue.trim() !== "Roseller") {
+  if (inputValue.trim() === "") {
     alertFunc("Error! Input a name to proceed in Todo List.");
   } else {
     loadingGif.style.display = "block";
     document.querySelector(".landing-page-hidden").style.display = "none";
+
     setTimeout(() => {
       loadingGif.style.display = "none";
 
@@ -55,7 +56,7 @@ form.addEventListener("submit", (e) => {
   input.value = "";
 });
 
-//Todo List Page
+//Todo List page
 const inputTodo = document.querySelector("#add-todo");
 const addBtn = document.querySelector("#add-btn");
 const listedItems = document.querySelector("#list-items-container");
@@ -68,15 +69,14 @@ addBtn.addEventListener("click", () => {
   if (inputValue.trim() === "") {
     alertFunc("Error! Input a task in the space provided.");
     inputTodo.value = "";
-  }
-  // else if (inputValue !== 8) {
-  //   alertFunc("Error! Input atleast 8 or more characters");
-  //   inputTodo.value = "";
-  // }
-  else {
+  } else {
+    if (inputValue.length < 8) {
+      inputTodo.value = "";
+      return alertFunc("Error! You should input atleast 8 characters");
+    }
+
     const list = document.createElement("li");
     list.setAttribute("id", "listed-items");
-
     list.innerHTML = `${inputValue.toUpperCase()} <i class="bx bx-trash"></i>`;
     listedItems.append(list);
     inputTodo.value = "";
