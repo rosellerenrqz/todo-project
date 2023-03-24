@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDo List Project</title>
+  </head>
+  <body>
+    <div class="alert-hidden">
+      <div class="alert-box-container">
+        <div class="alert-box">
+          <i class="bx bx-error-circle"></i>
+          <span class="message"></span><i class="bx bx-x"></i>
+        </div>
+      </div>
+    </div>
+
+    <img src="loading.gif" alt="" />
+    <img src="loading-99.gif" alt="" />
+    <div class="landing-page-hidden">
+      <div class="landing-page-container">
+        <h1 id="landing-page-header">Hello!</h1>
+        <form action="">
+          <label for="name"
+            >Please input your name to proceed in To-Do List</label
+          >
+          <input
+            type="text"
+            name="input"
+            id="input"
+            placeholder="Input your name" />
+          <button id="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main-container-hidden">
+      <div class="container">
+        <h1 id="header">
+          <span id="user-greeting"></span>
+        </h1>
+        <div id="tasks">
+          <input type="text" name="" id="add-todo" placeholder="Add a task" />
+          <button id="add-btn">Add</button>
+          <button id="exit-btn">Go Back</button>
+        </div>
+        <h1 id="list-items-header">Listed Items:</h1>
+      </div>
+
+      <div id="list-items-container"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

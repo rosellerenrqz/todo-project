@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2c3333;
+  padding: 50px;
+}
+
+.container {
+  background-color: #cbe4de;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  font-size: 35px;
+  font-weight: 700;
+  color: #2c3333;
+}
+
+#tasks {
+  position: relative;
+  padding: 30px 15px;
+  background-color: #ffff;
+  border-radius: 5px;
+  border-bottom: 1px solid #cbe4de;
+  text-align: center;
+}
+
+#tasks input {
+  width: 70%;
+  height: 45px;
+  font-size: 15px;
+  /* border: none; */
+  border-radius: 5px;
+  border: 2px solid #cbe4de;
+  padding: 2px;
+  color: black;
+  font-weight: 500;
+  position: relative;
+}
+
+#tasks input:focus {
+  outline: none;
+  border-color: #2e4f4f;
+}
+
+#tasks #exit-btn:hover {
+  opacity: 70%;
+  transition: 0.2s all linear;
+}
+
+#tasks #exit-btn:active {
+  opacity: 50%;
+  transition: 0.2s all linear;
+}
+
+#tasks #add-btn,
+#tasks #exit-btn {
+  position: relative;
+  margin-left: 5px;
+  padding: 12px 12px;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  background-color: #0e8388;
+  cursor: pointer;
+}
+
+#tasks #add-btn:hover {
+  opacity: 70%;
+  transition: 0.2s all linear;
+}
+
+#tasks #add-btn:active {
+  opacity: 50%;
+  transition: 0.2s all linear;
+}
+
+#list-items {
+  margin-top: 100px;
+}
+
+#list-items-header {
+  display: flex;
+  padding: 10px 0;
+  font-weight: 700;
+  /* margin-bottom: 20px; */
+  justify-content: center;
+  background-color: #cbe4de;
+  color: #2e4f4f;
+}
+
+#list-items-container {
+  background-color: #fff;
+  width: 50%;
+  margin: auto;
+  /* border-bottom: 2px solid; */
+}
+
+#list-items-container #listed-items {
+  margin-top: 10px;
+  width: 400px;
+  padding: 20px 0;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 2px solid #cbe4de;
+  list-style: none;
+  position: relative;
+  word-break: break-all;
+}
+
+#listed-items .bx {
+  font-size: 25px;
+  color: rgb(250, 100, 100);
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+#listed-items .bx:hover {
+  opacity: 70%;
+  transition: 0.2s all linear;
+}
+
+#listed-items .bx:active {
+  opacity: 50%;
+  transition: 0.2all linear;
+}
+
+/*
+LANDING PAGE
+*/
+img {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 10%;
+  display: none;
+  z-index: 100;
+}
+
+.landing-page-container {
+  background: #cbe4de;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+#landing-page-header {
+  /* text-align: center; */
+  color: #0e8388;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+form {
+  position: relative;
+}
+
+label {
+  color: #2c3333;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#input[type="text"] {
+  display: flex;
+  margin: auto;
+  width: 40%;
+  padding: 15px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  color: #2c3333;
+}
+
+#input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#submit-btn {
+  /* position: absolute; */
+  /* right: 22%;
+  top: 55%; */
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0e8388;
+  color: white;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  opacity: 60%;
+  transition: 0.2s all linear;
+}
+
+#submit-btn:active {
+  opacity: 40%;
+  transition: 0.1s all linear;
+}
+
+/* ALERT BOX */
+
+.alert-box-container {
+  background-color: rgb(255, 80, 80);
+  padding: 15px 20px;
+  width: 460px;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  border-radius: 4px;
+  border: none;
+}
+
+.message {
+  color: rgb(255, 255, 255);
+  margin-left: 20px;
+}
+
+.alert-box .bx-error-circle {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  left: 10px;
+}
+
+.alert-box .bx-x {
+  font-size: 35px;
+  top: 4px;
+  right: 5px;
+  padding: 4px;
+  position: absolute;
+  color: rgb(167, 1, 1);
+  background-color: rgb(252, 61, 61);
+  cursor: pointer;
+}
+
+.alert-box .bx-x:hover {
+  opacity: 70%;
+  transition: 0.2s all linear;
+}
+
+.alert-box .bx-x:active {
+  opacity: 50%;
+  transition: 0.2s all linear;
+}
+
+.alert-hidden {
+  display: none;
+}
+
+.main-container-hidden {
+  display: none;
+}
+
+.landing-page-hidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
